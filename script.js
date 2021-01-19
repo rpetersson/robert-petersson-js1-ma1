@@ -18,3 +18,5 @@ heading.style.fontSize = "2em";
 //question 4
 
 heading.classList.add("subheading");
+
+//question 5
