@@ -20,3 +20,16 @@ heading.style.fontSize = "2em";
 heading.classList.add("subheading");
 
 //question 5
+
+paragrahps = document.querySelectorAll("p")
+
+for (i of paragrahps){
+    i.style.color = "red";
+}
+
+//OR
+
+for (i = 0; i < paragrahps.length; i++){
+    paragrahps[i].style.color = "red";
+
+}
