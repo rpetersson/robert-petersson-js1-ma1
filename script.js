@@ -23,13 +23,73 @@ heading.classList.add("subheading");
 
 paragrahps = document.querySelectorAll("p")
 
-for (i of paragrahps){
+for (let i of paragrahps){
     i.style.color = "red";
 }
 
 //OR
 
-for (i = 0; i < paragrahps.length; i++){
+for (let i = 0; i <= paragrahps.length; i++){
     paragrahps[i].style.color = "red";
+}
+
+//question 6
+
+resultsContainer = document.querySelector(".results");
+
+resultsContainer.innerHTML = "<p>New paragraph</p>";
+
+resultsContainer.style.backgroundColor = "yellow";
+
+//question 7
+
+const cats = [
+    {
+        name: "Blob",
+        age: 10
+    },
+    {
+        name: "Harold",
+    },
+    {
+        name: "Blurt",
+        age: 21
+    }
+];
+
+function loopFunction(list) {
+    for (let i = 0; i < list.length; i++) {
+        console.log(list[i].name)
+    }
 
 }
+
+loopFunction(cats)
+
+//question 8
+
+function createCats(cats) {
+
+   let html = []
+
+    for (let c of cats) {
+       let newDiv = document.createElement("div"); //Creates a div per Object in Cats.
+
+        let addName = "<h5>" + c.name +"</h5>";
+        let addAge = "<p>" + c.age + "</p>";
+
+        if (addAge === "<p>undefined</p>") {
+            addAge = "<p>Age Unknown</p>"
+        }
+
+        html = html + addName + addAge
+    }
+
+return html
+}
+
+createCats(cats);
+
+const catContainer = document.querySelector(".cat-container")
+
+catContainer.innerHTML = createCats(cats);
