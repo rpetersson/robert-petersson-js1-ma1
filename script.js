@@ -72,23 +72,20 @@ function createCats(cats) {
 
    let html = []
 
-    for (let c of cats) {
-       let newDiv = document.createElement("div"); //Creates a div per Object in Cats.
+    for (let cat of cats) {
 
-        let addName = "<h5>" + c.name +"</h5>";
-        let addAge = "<p>" + c.age + "</p>";
+        const addName = "<h5>" + cat.name +"</h5>";
+        let addAge = "<p>" + cat.age + "</p>";
 
         if (addAge === "<p>undefined</p>") {
             addAge = "<p>Age Unknown</p>"
         }
 
-        html = html + addName + addAge
+        html = html + "<div>" + addName + addAge + "</div>"
     }
 
 return html
 }
-
-createCats(cats);
 
 const catContainer = document.querySelector(".cat-container")
 
